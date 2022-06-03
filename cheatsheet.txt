@@ -1,0 +1,20 @@
+$_SERVER["REQUEST_METHOD"] == "POST"
+
+function test_input($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+
+     action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+
+
+
+     echo '<div class="container mt-4">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Account Created Successfully!</strong> Now you can <b><a class="link-success"  href="login.php">Login</a></b> to continue
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+             </div>';
